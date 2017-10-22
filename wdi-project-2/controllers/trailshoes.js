@@ -33,10 +33,21 @@ function showRoute(req, res, next) {
     .catch(next);
 }
 
+function editRoute(req, res, next) {
+  Trailshoe
+    .findById(req.params.id)
+    .exec()
+    .then((trailshoe)=> {
+      return res.render('trailshoes/edit', { trailshoe });
+    })
+    .catch(next);
+}
+
 
 module.exports = {
   index: indexRoute,
   new: newRoute,
   create: createRoute,
-  show: showRoute
+  show: showRoute,
+  edit: editRoute
 };

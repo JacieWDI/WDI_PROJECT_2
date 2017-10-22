@@ -9,9 +9,8 @@ router.get('/', (req, res) =>
 
 //const registrationsController = require('../controllers/registrations');
 
-
 // RESTful routes
-// All URLS should contain the PLURAL... don't chose octopus or people or something silly.
+// All URLS should contain the PLURAL
 
 //INDEX & CREATE
 router.route('/trailshoes')
@@ -30,6 +29,8 @@ router.route('trailshoes/:id')
 //above
 
 // EDIT
+router.route('/trailshoes/:id/edit')
+  .get(secureRoute, trailshoesController.edit);
 
 // UPDATE
 

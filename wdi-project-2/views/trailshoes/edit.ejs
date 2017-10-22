@@ -1,0 +1,36 @@
+<form method="POST" action="/trailshoes/<%= trailshoes.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div>
+    <label for="brand">Brand</label>
+    <input type="text" name="brand" id="brand" value="<%= trailshoe.brand %>" required>
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="<%= trailshoe.name %>" required>
+  </div>
+  <fieldset>
+    <legend>Description</legend>
+    <div>
+      <label for="description">Description Line 1</label>
+      <input type="text" name="description[line1]" id="line1" value="<%= trailshoe.description.line1 %>" required>
+    </div>
+    <div>
+      <label for="description">Description Line 2</label>
+      <input type="text" name="description[line2]" id="line2" value="<%= trailshoe.description.line2 %>" required>
+    </div>
+    <div>
+      <label for="description">Description Line 3</label>
+      <input type="text" name="description[line3]" id="line3" value="<%= trailshoe.description.line3 %>">
+    </div>
+  </fieldset>
+  <div>
+    <label for="stars">Stars</label>
+    <input type="number" name="stars" id="stars" min="1" max="5" value="<%= trailshoe.stars %>"required>
+  </div>
+  <div>
+    <label for="image">Image</label>
+    <input type="text" name="image" id="image" value="<%= trailshoe.address.image %>"required>
+  </div>
+
+  <button class="button">Update Trailshoe</button>
+</form>
