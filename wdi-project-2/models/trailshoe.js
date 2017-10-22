@@ -4,7 +4,8 @@ const trailshoeSchema = new mongoose.Schema({
   brand: String,
   name: String,
   image: { type: String, required: true},
-  description: String
+  description: String,
+  stars: { type: Number, required: true }
 });
 
 module.exports = mongoose.model('Trailshoe', trailshoeSchema);

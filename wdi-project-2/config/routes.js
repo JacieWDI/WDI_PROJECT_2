@@ -1,6 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const trailshoesController =  require('../controllers/trailshoes');
+const secureRoute = require('../lib/secureRoute');
 
 //Home route
 router.get('/', (req, res) =>
@@ -12,27 +13,21 @@ router.get('/', (req, res) =>
 // RESTful routes
 // All URLS should contain the PLURAL... don't chose octopus or people or something silly.
 
-//INDEX
+//INDEX & CREATE
 router.route('/trailshoes')
-  .get(trailshoesController.index);
-
-//ALT CHECK FOR INDEX
-// const Trailshoe = require('../models/trailshoe');
-// router.get('/trailshoes', (req, res)=>{
-//   Trailshoe
-//     .find()
-//     .exec()
-//     .then(trailshoe => res.render('trailshoes/index, { trailshoes }'))
-//     .catch(err => res.render('error', { err }));
-// });
-
-
+  .get(trailshoesController.index)
+  .post(secureRoute, trailshoesController.create);
 
 // NEW
+router.route('/trailshoes/new')
+  .get(secureRoute, trailshoesController.new);
 
 // SHOW
+router.route('trailshoes/:id')
+  .get(trailshoesController.show);
 
 // CREATE
+//above
 
 // EDIT
 

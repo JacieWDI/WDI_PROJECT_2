@@ -1,0 +1,12 @@
+<div class="large-12 columns">
+  <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
+  <h2><%= trailshoe.name %></h2>
+
+  <p>
+    <%= trailshoe.brand %><br>
+    <%= trailshoe.name %><br>
+    <%= trailshoe.description %><br>
+  </p>
+  <p>
+    <% while(trailshoe.stars--) { %> &star; <% } %>
+  </p>

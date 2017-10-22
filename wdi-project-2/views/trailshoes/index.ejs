@@ -1,10 +1,14 @@
 <% trailshoes.forEach((trailshoe)=> { %>
   <div class="large-4 columns">
     <a href="/trailshoes/<%= trailshoe.id %>">
-      <img class="thumnail" src="<%= trailshoe.image %>" alt="<% trailshoe.name %>"
+      <img class="thumbnail" src="<%= trailshoe.image %>" alt="<% trailshoe.name %>"
       <h2><%= trailshoe.brand %></h2>
+      <h2><%= trailshoe.name %></h2>
       <p>
         <%= trailshoe.description %>
+      </p>
+      <p>
+        <% while(trailshoe.stars--) { %> &star; <% } %>
       </p>
     </a>
   </div>
