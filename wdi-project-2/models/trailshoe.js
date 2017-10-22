@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const trailshoeSchema = new mongoose.Schema({
   brand: String,
-  shoe: String,
+  name: String,
   image: { type: String, required: true},
   description: String
 });

@@ -12,7 +12,6 @@ const authentication = require('./lib/authentication');
 const errorHandler = require('./lib/errorHandler');
 
 const app = express();
-const port = process.env.PORT || 3000;
 const { port, dbUri, sessionSecret } = require('./config/environment');
 
 mongoose.Promise = require('bluebird');

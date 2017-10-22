@@ -2,24 +2,31 @@ const express = require('express');
 const router  = express.Router();
 const trailshoesController =  require('../controllers/trailshoes');
 
+//Home route
 router.get('/', (req, res) =>
   res.render('statics/homepage'));
 
-router.route('/trailshoes')
-  .get(trailshoesController.index);
-
-
 //const registrationsController = require('../controllers/registrations');
 
-// A home route
-// router.get('/', (req, res) => res.render('homepage'));
 
 // RESTful routes
 // All URLS should contain the PLURAL... don't chose octopus or people or something silly.
 
-// INDEX
-// router.route('/')
-//   .get(trailshoesController.index);
+//INDEX
+router.route('/trailshoes')
+  .get(trailshoesController.index);
+
+//ALT CHECK FOR INDEX
+// const Trailshoe = require('../models/trailshoe');
+// router.get('/trailshoes', (req, res)=>{
+//   Trailshoe
+//     .find()
+//     .exec()
+//     .then(trailshoe => res.render('trailshoes/index, { trailshoes }'))
+//     .catch(err => res.render('error', { err }));
+// });
+
+
 
 // NEW
 

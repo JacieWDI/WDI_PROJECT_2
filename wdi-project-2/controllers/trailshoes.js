@@ -1,4 +1,4 @@
-const TrailShoe = require('../models/trailshoe');
+const Trailshoe = require('../models/trailshoe');
 
 function indexRoute(req, res, next) {
   Trailshoe

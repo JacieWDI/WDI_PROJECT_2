@@ -1,0 +1,11 @@
+<% trailshoes.forEach((trailshoe)=> { %>
+  <div class="large-4 columns">
+    <a href="/trailshoes/<%= trailshoe.id %>">
+      <img class="thumnail" src="<%= trailshoe.image %>" alt="<% trailshoe.name %>"
+      <h2><%= trailshoe.brand %></h2>
+      <p>
+        <%= trailshoe.description %>
+      </p>
+    </a>
+  </div>
+<% }) %>
