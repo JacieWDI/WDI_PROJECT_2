@@ -32,11 +32,11 @@ Trailshoe
     description: 'Versatile trail running shoe built to take a beating and get you across the finish line, and clean up for your next adventure.'
   }])
   .then((trailshoe) => {
-    console.log(`${trailshoe.length} trailshoes created!`);
+    console.log(`${trailshoe.length}games created!`);
   })
-  .catch((err => {
+  .catch((err) => {
     console.log(err);
   })
-    .finally(() => {
-      mongoose.connection.close();
-    }));
+  .finally(() => {
+    mongoose.connection.close();
+  });
