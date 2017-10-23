@@ -1,0 +1,21 @@
+<form method="POST" action="/profile">
+  <input type="hidden" name="method" value="PUT">
+  <div>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required value="<%= user.username %>">
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required value="<%= user.email %>">
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+  </div>
+  <div>
+    <label for="passwordConfirmation">Password Confirmation</label>
+    <input type="password" name="passwordConfirmation" id="passwordConfirmation" required>
+  </div>
+
+  <button>Register</button>
+</form>
