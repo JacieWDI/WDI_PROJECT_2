@@ -1,20 +1,31 @@
-<div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li><a href="/">Trail Shoe Comments</a></li>
-      <li><a href="/trailshoes">Trailshoes</a></li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="dropdown menu" data-dropdown-menu>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">GRIP MOVE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/trailshoes">Trail Shoes<span class="sr-only">(current)</span></a>
+      </li>
       <% if(!locals.isAuthenticated) { %>
-        <li><a href="/register">Register</a></li>
-        <li><a href="/login">Login</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
       <% } else { %>
-        <li><a href="/profile"><%= user.username %></a></li>
-        <li><a href="/logout">Logout</a></li>
-        <li><a href="/trailshoes/new">Add Trailshoe</a></li>
+      <li class="nav-item">
+        <a class="nav-link user" href="/profile"><%= user.username %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/trailshoes/new">Add Trail Shoe</a>
+      </li>
       <% } %>
     </ul>
   </div>
-</div>
+</nav>
