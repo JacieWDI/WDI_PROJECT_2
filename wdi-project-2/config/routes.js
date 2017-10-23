@@ -42,6 +42,14 @@ router.route('/trailshoes/:id/edit')
 // DELETE
 //above
 
+
+//COMMENTS
+
+router.route('/trailshoes/:id/comments')
+  .post(secureRoute, trailshoesController.createComment);
+router.route('/trailshoes/:id/comments/:commentId')
+  .delete(secureRoute, trailshoesController.deleteComment);
+
 //REGISTRATION ROUTES
 
 router.route('/register')

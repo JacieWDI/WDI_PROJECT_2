@@ -3,6 +3,7 @@ const Trailshoe = require('../models/trailshoe');
 function indexRoute(req, res, next) {
   Trailshoe
     .find()
+    .populate('createdBy')
     .exec()
     .then((trailshoes) => res.render('trailshoes/index', { trailshoes }))
     .catch(next);
@@ -25,6 +26,7 @@ function createRoute(req, res, next) {
 function showRoute(req, res, next) {
   Trailshoe
     .findById(req.params.id)
+    .populate('createdBy')
     .exec()
     .then(trailshoe => {
       if(!trailshoe) return res.notFound();
@@ -78,6 +80,39 @@ function deleteRoute(req, res, next) {
     .catch(next);
 }
 
+function createCommentRoute(req, res, next) {
+  Trailshoe
+    .findById(req.params.id)
+    .exec()
+    .then(trailshoe => {
+      if (!trailshoe) return res.notFound();
+
+      req.body.createdBy = req.user;
+      trailshoe.comments.push(req.body);
+
+      return trailshoe.save();
+    })
+    .then(() => res.redirect(`/hotels/${req.params.id}`))
+    .catch((err) => {
+      if (err.name === 'ValidationError') res.badRequest(`/trailshoes/${req.params.id}`, err.toString());
+      next(err);
+    });
+}
+
+function deleteCommentRoute(req, res, next) {
+  Trailshoe
+    .findById(req.params.id)
+    .exec()
+    .then(trailshoe => {
+      if (!trailshoe) return res.notFound();
+      if (!trailshoe.belongsTo(req.user)) return res.unauthorized('You do not have permission to delete that resource');
+      trailshoe.comments.id(req.params.commentId).remove();
+
+      return trailshoe.save();
+    })
+    .then(trailshoe => res.redirect(`/trailshoes/${trailshoe.id}`))
+    .catch(next);
+}
 
 module.exports = {
   index: indexRoute,
@@ -86,5 +121,8 @@ module.exports = {
   show: showRoute,
   edit: editRoute,
   update: updateRoute,
-  delete: deleteRoute
+  delete: deleteRoute,
+  createComment: createCommentRoute,
+  deleteComment: deleteCommentRoute
+
 };

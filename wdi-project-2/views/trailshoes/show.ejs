@@ -2,6 +2,15 @@
   <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
   <h2><%= trailshoe.name %></h2>
 
+  <% if(locals.isAuthenticated && hotel.belongsTo(user)) { %>
+    <a href="/trailshoes/<%= trailshoe.id %>/edit" class="button">Edit</a>
+
+    <form method="POST" action="/trailshoes/<%= trailshoe.id %>">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="button alert">Delete</button>
+    </form>
+  <% } %>
+
   <p>
     <%= trailshoe.brand %><br>
     <%= trailshoe.name %><br>
@@ -11,4 +20,22 @@
     <% while(trailshoe.stars--) { %> &star; <% } %>
   </p>
 
-  <small>Added by: <%=trailshoe.createdBy.username %></small>
+  <small>Added by: <%= trailshoe.createdBy.username %></small>
+
+    <section>
+      <h4>Comments</h4>
+      <% trailshoe.comments.forEach((comment) => { %>
+        <p><%= comment.content %></p>
+        <small><%= comment.createdBy.username %></small>
+      <% }) %>
+    </section>
+
+    <% if(locals.isAuthenticated) { %>
+      <section>
+        <h4>Leave a comment</h4>
+        <form method="POST" action="/trailshoes/<%= trailshoe.id %>/comments">
+          <textarea name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
+          <button class="button">Leave a comment</button>
+        </form>
+      </section>
+    <% } %>
