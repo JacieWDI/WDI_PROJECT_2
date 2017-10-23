@@ -51,17 +51,3 @@ app.use(routes);
 app.use(errorHandler);
 
 app.listen(port, () => console.log(`Express is listening on port ${port}`));
-
-
-
-//PSEUDOCODE
-
-//run JSON package on starter code - follow notes taken Friday
-//set up server - creating index.js with initially rendering homepage
-//set up controllers
-//set up middleware
-//basic style sheet setup for gulp
-//database & models set-up for trail running shoes
-//Authentication - use bible from Friday
-//Set-up static images to link to static page with info and comments functionality
-//IF TIME Once all functionality basic site working - set-up scrolling screen and transform of product page

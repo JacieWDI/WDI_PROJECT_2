@@ -4,17 +4,17 @@ const { dbUri } = require('../config/environment');
 mongoose.Promise = require('bluebird');
 mongoose.connect(dbUri, { useMongoClient: true });
 
-// Require the model
+// REQUIRE THE MODEL
 
 const Trailshoe = require('../models/trailshoe');
 const User = require('../models/user');
 
-// Drop the model
+// DROP THE MODEL
 
 Trailshoe.collection.drop();
 User.collection.drop();
 
-// Create the models
+// CREATE MODELS
 
 User
   .create([{

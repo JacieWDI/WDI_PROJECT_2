@@ -4,8 +4,7 @@ function sessionsNew(req, res) {
   res.render('sessions/new');
 }
 
-// take the email that the user inputted in the form and find that the user in the database, check if user exists or is password matches with the one in the database and if either do not match, display error message.
-
+//CHECK USER DOES NOT ALREADY EXIST & DETAILS MATCH - IF NOT, THROW ERROR
 function sessionsCreate(req, res) {
   User
     .findOne({ email: req.body.email })

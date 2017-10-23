@@ -5,14 +5,9 @@ const registrationsController = require('../controllers/registrations');
 const trailshoesController =  require('../controllers/trailshoes');
 const secureRoute = require('../lib/secureRoute');
 
-//Home route
+//HOME ROUTE
 router.get('/', (req, res) =>
   res.render('statics/homepage'));
-
-//const registrationsController = require('../controllers/registrations');
-
-// RESTful routes
-// All URLS should contain the PLURAL
 
 //INDEX & CREATE
 router.route('/trailshoes')
@@ -29,19 +24,9 @@ router.route('/trailshoes/:id')
   .put(secureRoute, trailshoesController.update)
   .delete(secureRoute, trailshoesController.delete);
 
-// CREATE
-//above
-
 // EDIT
 router.route('/trailshoes/:id/edit')
   .get(secureRoute, trailshoesController.edit);
-
-// UPDATE
-//above
-
-// DELETE
-//above
-
 
 //COMMENTS
 
