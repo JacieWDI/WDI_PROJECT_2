@@ -2,7 +2,7 @@
   <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
   <h2><%= trailshoe.name %></h2>
 
-  <% if(locals.isAuthenticated && hotel.belongsTo(user)) { %>
+  <% if(locals.isAuthenticated && trailshoe.belongsTo(user)) { %>
     <a href="/trailshoes/<%= trailshoe.id %>/edit" class="button">Edit</a>
 
     <form method="POST" action="/trailshoes/<%= trailshoe.id %>">

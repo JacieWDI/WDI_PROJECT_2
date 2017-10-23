@@ -124,5 +124,4 @@ module.exports = {
   delete: deleteRoute,
   createComment: createCommentRoute,
   deleteComment: deleteCommentRoute
-
 };

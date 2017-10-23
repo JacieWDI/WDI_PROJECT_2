@@ -46,8 +46,7 @@ router.route('/trailshoes/:id/edit')
 //COMMENTS
 
 router.route('/trailshoes/:id/comments')
-  .post(secureRoute, trailshoesController.createComment);
-router.route('/trailshoes/:id/comments/:commentId')
+  .post(secureRoute, trailshoesController.createComment)
   .delete(secureRoute, trailshoesController.deleteComment);
 
 //REGISTRATION ROUTES
