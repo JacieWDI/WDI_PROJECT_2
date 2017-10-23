@@ -1,5 +1,7 @@
 const express = require('express');
 const router  = express.Router();
+const sessionsController = require('../controllers/sessions');
+const registrationsController = require('../controllers/registrations');
 const trailshoesController =  require('../controllers/trailshoes');
 const secureRoute = require('../lib/secureRoute');
 
@@ -36,5 +38,14 @@ router.route('/trailshoes/:id/edit')
 
 // DELETE
 
+//REGISTRATION ROUTES
+
+router.route('/register')
+  .get(registrationsController.new)
+  .post(registrationsController.create);
+
+router.route('/login')
+  .get(sessionsController.new)
+  .post(sessionsController.create);
 
 module.exports = router;
