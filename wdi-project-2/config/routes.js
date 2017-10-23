@@ -45,7 +45,7 @@ router.route('/register')
   .post(registrationsController.create);
 
 router.route('/login')
-  .ge(sessionsController.new)
+  .get(sessionsController.new)
   .post(sessionsController.create);
 
 module.exports = router;

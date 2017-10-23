@@ -1,19 +1,20 @@
-<%<form method="POST" action="/register">
-  <div class="form-group">
+<form method="POST" action="/register">
+  <div>
     <label for="username">Username</label>
-    <input type="text" name="username" id="username" class="form-control">
+    <input type="text" name="username" id="username">
   </div>
-  <div class="form-group">
+  <div>
     <label for="email">Email</label>
-    <input type="text" name="email" id="email" class="form-control">
+    <input type="email" name="email" id="email">
   </div>
-  <div class="form-group">
+  <div>
     <label for="password">Password</label>
-    <input type="password" name="password" id="password" class="form-control">
+    <input type="password" name="password" id="password">
   </div>
-  <div class="form-group">
+  <div>
     <label for="passwordConfirmation">Password Confirmation</label>
-    <input type="password" name="passwordConfirmation" id="passwordConfirmation" class="form-control">
+    <input type="password" name="passwordConfirmation" id="passwordConfirmation">
   </div>
-  <button class="btn btn-primary">Register</button>
-</form>%>
+
+  <button>Register</button>
+</form>
