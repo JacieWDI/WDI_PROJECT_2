@@ -1,4 +1,4 @@
-<form method="POST" action="/trailshoes/<%= trailshoes.id %>">
+<form method="POST" action="/trailshoes/<%= trailshoe.id %>">
   <input type="hidden" name="_method" value="PUT">
   <div>
     <label for="brand">Brand</label>
@@ -29,7 +29,7 @@
   </div>
   <div>
     <label for="image">Image</label>
-    <input type="text" name="image" id="image" value="<%= trailshoe.address.image %>"required>
+    <input type="text" name="image" id="image" value="<%= trailshoe.image %>"required>
   </div>
 
   <button class="button">Update Trailshoe</button>

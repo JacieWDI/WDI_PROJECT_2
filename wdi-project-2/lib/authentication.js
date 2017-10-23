@@ -16,6 +16,7 @@ function authentication(req, res, next) {
       req.session.userId = user.id;
       res.locals.user = user;
       res.locals.isAuthenticated = true;
+      req.user = user;
       next();
     });
 }

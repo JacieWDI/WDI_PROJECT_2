@@ -92,7 +92,7 @@ function createCommentRoute(req, res, next) {
 
       return trailshoe.save();
     })
-    .then(() => res.redirect(`/hotels/${req.params.id}`))
+    .then(() => res.redirect(`/trailshoes/${req.params.id}`))
     .catch((err) => {
       if (err.name === 'ValidationError') res.badRequest(`/trailshoes/${req.params.id}`, err.toString());
       next(err);
