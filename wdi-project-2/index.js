@@ -26,7 +26,7 @@ app.set('views', `${__dirname}/views`);
 app.use(expressLayouts);
 app.use(express.static(`${__dirname}/public`));
 if('test' !== env) app.use(morgan('dev'));
-// app.use(express.static(`${__dirname}/views`));
+
 
 app.use(morgan('dev'));
 app.use(session({
