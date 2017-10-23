@@ -7,12 +7,12 @@ function newRoute(req, res) {
 function createRoute(req, res, next) {
   User
     .create(req.body)
-    .then((user)=> {
-      res.redirect('/');
+    .then(()=> {
+      res.redirect('/login');
     })
     .catch((err)=> {
       if(err.name === 'ValidationError') {
-        return res.status(400).render('registrations/new', { message: 'Passwords do not match'});
+        return res.status(400).render('statics/error', { message: 'Passwords do not match'});
       }
       res.status(500).end();
     });
