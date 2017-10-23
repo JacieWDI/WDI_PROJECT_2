@@ -34,7 +34,7 @@ User
         stars: 5,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'My favourite shoe with decent toebox!',
           createdBy: users[0]
         }
       },{
@@ -45,7 +45,7 @@ User
         stars: 3,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'Slightly narrow, so go a size up, not great on rocks. I play softball in mine so just running on grass and uneven ground.',
           createdBy: users[0]
 
         }
@@ -57,7 +57,7 @@ User
         stars: 4,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'Great for all your OCR needs, I am also a fan of Merrell brand for hiking shoes.',
           createdBy: users[0]
         }
       },{
@@ -68,7 +68,7 @@ User
         stars: 4,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'Adidas seem to make well cushioned, comfortable shoes - bonus it is waterproof!',
           createdBy: users[0]
         }
       },{
@@ -76,10 +76,10 @@ User
         name: 'Peregrine 7',
         image: 'https://cdn.fortsu.co.uk/images/products/saucony-peregrine-7_men.jpg',
         description: 'The Peregrine line has been a staple of the trail running market through the generations, excelling in comfort, traction, protection and weight. The latest version has an added full-length layer of cushioning.',
-        stars: 4,
+        stars: 3,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'Nicely cushioned.',
           createdBy: users[0]
         }
       }, {
@@ -90,7 +90,7 @@ User
         stars: 4,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'Fan of their climbing gear, I prefer cushioning as a beginner-trail runner but great for more technical trail runners.',
           createdBy: users[0]
         }
       }, {
@@ -101,7 +101,7 @@ User
         stars: 5,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'Great shoe, love the lacing system - amazing, innovative brand.',
           createdBy: users[0]
         }
       }, {
@@ -109,10 +109,10 @@ User
         name: 'Gel-FujiLyte',
         image: 'http://equipatetrailrunning.com/wp-content/uploads/Asics-Gel-Fuji-Lyte.jpg',
         description: 'For smooth trails or mix with road running, the Asics Gel-FujiLyte is for you. It offers better outer grip, lateral stability and support than a road shoe. Asics are a favourite for road runners and this will not disappoint for light trails, however, if you plan on pushing it further in trail running, an alternative maybe more suitable.',
-        stars: 3,
+        stars: 4,
         createdBy: users[0],
         comments: {
-          content: 'My favourite shoe!',
+          content: 'Asics are my go to for road running shoe so I love this lighter trail shoe for light London trails.',
           createdBy: users[0]
         }
       }]);
