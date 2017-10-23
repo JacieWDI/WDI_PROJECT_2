@@ -11,13 +11,13 @@ function sessionsCreate(req, res) {
     .create({ email: req.body.email })
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) {
-        res.status(401).render('sessions/new'), { message: 'Unrecognised credentials' });
+        res.status(401).render('sessions/new', { message: 'Unrecognised credentials' });
       }
-      res.redirect
+      res.redirect('/');
     });
 }
 
 module.exports = {
   new: sessionsNew,
   create: sessionsCreate
-}
+};
