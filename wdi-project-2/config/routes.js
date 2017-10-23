@@ -24,7 +24,7 @@ router.route('/trailshoes/new')
   .get(secureRoute, trailshoesController.new);
 
 // SHOW
-router.route('trailshoes/:id')
+router.route('/trailshoes/:id')
   .get(trailshoesController.show);
 
 // CREATE
@@ -47,5 +47,7 @@ router.route('/register')
 router.route('/login')
   .get(sessionsController.new)
   .post(sessionsController.create);
+
+
 
 module.exports = router;

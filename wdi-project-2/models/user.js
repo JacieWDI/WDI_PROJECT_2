@@ -30,7 +30,7 @@ userSchema.pre('save', function hashPassword(next) {
     this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(8));
   }
   next();
-})
+});
 
 //In order to let a user login, we need to compare the inputted password in the field and compare it with the one that is in the database. We want to create another bit of Middleware
 

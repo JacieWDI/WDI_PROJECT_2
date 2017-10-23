@@ -12,14 +12,18 @@ function createRoute(req, res, next) {
     })
     .catch((err)=> {
       if(err.name === 'ValidationError') {
-        return res.status(400).render('statics/error', { message: 'Passwords do not match'});
+        return res.status(400).render('registrations/new', { message: 'Passwords do not match'});
       }
-      res.status(500).end();
+      next(err);
     });
 }
 
+function showRoute(req, res) {
+  return res.render('registrations/show');
+}
 
 module.exports = {
   new: newRoute,
-  create: createRoute
+  create: createRoute,
+  show: showRoute
 };

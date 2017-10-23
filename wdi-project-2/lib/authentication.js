@@ -1,7 +1,7 @@
 const User = require('../models/user');
 
 function authentication(req, res, next) {
-  if(!req.session.isAuthenticated) return next();
+  if(!req.session.userId) return next();
 
   User
     .findById(req.session.userId)
@@ -14,14 +14,10 @@ function authentication(req, res, next) {
       }
 
       req.session.userId = user.id;
-
       res.locals.user = user;
       res.locals.isAuthenticated = true;
-
       next();
     });
-
-  next();
 }
 
 module.exports = authentication;
