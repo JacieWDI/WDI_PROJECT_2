@@ -1,9 +1,26 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  // background-color: #0a0a0a;
-  // color: white;
+  // font-family: 'Helvetica', sans-serif;
+  font-family: 'Neuton', serif;
+  font-family: 'Anton', sans-serif;
 }
 
+h4 {
+  font-family: 'Neuton', serif;
+  font-family: 'Anton', sans-serif;
+}
+.option {
+  position: absolute;
+  top:100px;
+  right:100px;
+  text-align: right;
+  a, button {
+    margin-bottom:100px;
+    min-width:100px;
+    cursor:pointer;
+  }
+
+
+}
 .nav-item {
   text-transform:uppercase;
   font-weight: bold;

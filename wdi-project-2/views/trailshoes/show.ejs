@@ -1,21 +1,25 @@
 <div class="container">
 
 <div class="col-md-12 col-lg-12">
-  <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
-  <h2><%= trailshoe.name %></h2>
-
   <% if(locals.isAuthenticated && trailshoe.belongsTo(user)) { %>
+    <div class="option">
     <a href="/trailshoes/<%= trailshoe.id %>/edit" class="button">Edit</a>
 
     <form method="POST" action="/trailshoes/<%= trailshoe.id %>">
       <input type="hidden" name="_method" value="DELETE">
       <button class="button alert">Delete</button>
     </form>
+    </div>
   <% } %>
 
+  <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
+  <h2><%= trailshoe.name %></h2>
+
+
+
   <p>
-    <%= trailshoe.brand %><br>
-    <%= trailshoe.name %><br>
+    <h2><%= trailshoe.brand %></h2><br>
+    <h3><%= trailshoe.name %></h3><br>
     <%= trailshoe.description %><br>
   </p>
   <div class="staroutline">
