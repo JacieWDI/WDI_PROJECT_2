@@ -11,12 +11,8 @@
     </div>
   <% } %>
   <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
-  <h2><%= trailshoe.name %></h2>
-
-
-
   <p>
-    <h2><%= trailshoe.brand %></h2><br>
+    <h2><%= trailshoe.brand %></h2>
     <h3><%= trailshoe.name %></h3><br>
     <%= trailshoe.description %><br>
   </p>
@@ -29,7 +25,7 @@
   <small>Added by: <%= trailshoe.createdBy.username %></small>
 
     <section>
-      <h4>Comments</h4>
+      <h3>Comments</h3>
       <% trailshoe.comments.forEach((comment) => { %>
         <p><%= comment.content %></p>
         <small><%= comment.createdBy.username %></small>
@@ -41,7 +37,7 @@
         <h4>Leave a comment</h4>
         <form method="POST" action="/trailshoes/<%= trailshoe.id %>/comments">
           <textarea name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
-          <button class="button">Leave a comment</button>
+          <button class="button">Submit</button>
         </form>
       </section>
     <% } %>

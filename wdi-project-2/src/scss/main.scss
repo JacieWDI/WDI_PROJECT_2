@@ -2,6 +2,8 @@ body {
   // font-family: 'Helvetica', sans-serif;
   font-family: 'Neuton', serif;
   font-family: 'Anton', sans-serif;
+  height: 100%;
+  margin: 0;
 }
 
 h4 {
@@ -44,6 +46,7 @@ h2 {
 .button {
   background-color: #333333;
   color: white;
+  min-width: 100px;
 }
 
 .image-responsive {
@@ -53,11 +56,21 @@ h2 {
   background-repeat: no-repeat;
 }
 
-footer {
-  width: 100%;
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -30px;
+}
+
+.footer,
+.push {
   height: 30px;
+}
+
+footer {
   background-color: #333333;
-  position: absolute;
-  float: right;
-  padding-right: 50px;
+  color: white;
+}
+
+.right {
+  text-align: right;
 }

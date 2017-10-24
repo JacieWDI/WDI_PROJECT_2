@@ -13,6 +13,7 @@
   <% include ./partials/_stylesheets.ejs %>
 </head>
 <body>
+  <div class="wrapper">
   <% include ./partials/_navbar %>
   <% for(const type in messages) { %>
     <div class="callout <%= type %>">
@@ -24,8 +25,11 @@
     </main>
 
     <% include ./partials/_scripts.ejs %>
+  <div class="push"></div>
+  </div>
+  <footer class="footer">
+    Made with &hearts; at GA<span class="right">&copy;Jacie 2017</span>
+  </footer>
 </body>
-<footer>
-    GA creation<span>&copy;Jacie 2017</span>
-</footer>
+
   </html>
