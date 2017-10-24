@@ -8,13 +8,19 @@ h4 {
   font-family: 'Neuton', serif;
   font-family: 'Anton', sans-serif;
 }
+
+h2 {
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
 .option {
   position: absolute;
-  top:100px;
+  top:50px;
   right:100px;
   text-align: right;
   a, button {
-    margin-bottom:100px;
+    margin-bottom:10px;
     min-width:100px;
     cursor:pointer;
   }

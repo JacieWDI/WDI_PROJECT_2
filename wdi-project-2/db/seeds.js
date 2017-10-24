@@ -51,7 +51,7 @@ User
         }
       },{
         brand: 'Merrell',
-        name: 'All Out Crush Tough Mudder',
+        name: 'All Out Crush',
         image: 'https://www.zappos.com/images/z/3/7/9/8/6/4/3798648-p-4x.jpg',
         description: 'Versatile trail running shoe built to take a beating and get you across the finish line, and clean up for your next adventure.',
         stars: 4,

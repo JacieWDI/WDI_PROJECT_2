@@ -4,14 +4,12 @@
   <% if(locals.isAuthenticated && trailshoe.belongsTo(user)) { %>
     <div class="option">
     <a href="/trailshoes/<%= trailshoe.id %>/edit" class="button">Edit</a>
-
     <form method="POST" action="/trailshoes/<%= trailshoe.id %>">
       <input type="hidden" name="_method" value="DELETE">
       <button class="button alert">Delete</button>
     </form>
     </div>
   <% } %>
-
   <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
   <h2><%= trailshoe.name %></h2>
 
