@@ -1,4 +1,6 @@
-<div class="large-12 columns">
+<div class="container">
+
+<div class="col-md-12 col-lg-12">
   <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
   <h2><%= trailshoe.name %></h2>
 
@@ -16,9 +18,11 @@
     <%= trailshoe.name %><br>
     <%= trailshoe.description %><br>
   </p>
-  <p>
-    <% while(trailshoe.stars--) { %> &star; <% } %>
-  </p>
+  <div class="staroutline">
+    <% var emptyStars = 5 - trailshoe.stars %>
+    <% while(trailshoe.stars--) { %> &#9733 <% } %>
+    <% while(emptyStars--) { %> &star; <% } %>
+  </div>
 
   <small>Added by: <%= trailshoe.createdBy.username %></small>
 
@@ -39,3 +43,4 @@
         </form>
       </section>
     <% } %>
+</div>

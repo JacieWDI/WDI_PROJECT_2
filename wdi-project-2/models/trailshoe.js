@@ -25,4 +25,10 @@ trailshoeSchema.methods.belongsTo = function trailshoeBelongsTo(user) {
   return user.id === this.createdBy.toString();
 };
 
+trailshoeSchema.virtual('shortDescription').get(function () {
+  return this.description.substr(0, 80) + '...';
+});
+
+
+
 module.exports = mongoose.model('Trailshoe', trailshoeSchema);

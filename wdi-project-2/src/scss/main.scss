@@ -1,5 +1,21 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #0a0a0a;
+  // background-color: #0a0a0a;
+  // color: white;
+}
+
+.staroutline {
+  color: #333333;
+}
+
+.button {
+  background-color: #333333;
   color: white;
+}
+
+.image-responsive {
+  padding-top: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }

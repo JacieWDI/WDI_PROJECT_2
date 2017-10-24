@@ -1,6 +1,12 @@
-<h1><%= user.name %></h1>
+<div class="container">
+
+<h2>Details</h2>
+
+<div class="form-group">
+  <label for="username">Username/Email</label>
 
 <p><%= user.email %></p>
+</div>
 
 <a href="/profile/edit" class="button">Edit</a>
 
@@ -8,3 +14,5 @@
   <input type="hidden" name="method" value="DELETE">
   <button class="button alert">Delete</button>
 </form>
+
+</div>

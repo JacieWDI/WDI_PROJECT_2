@@ -1,14 +1,24 @@
 <div class="container">
   <div class="row">
     <% trailshoes.forEach((trailshoe)=> { %>
-      <div class="col-md-6 col-lg-6">
+      <div class="col-md-3 col-lg-3">
         <a href="/trailshoes/<%= trailshoe.id %>">
-          <img class="img-thumbnail" src="<%= trailshoe.image %>" alt="<% trailshoe.name %>"
-          <h2><%= trailshoe.brand %></h2>
-          <h2><%= trailshoe.name %></h2>
-          <p><%= trailshoe.description %></p>
-          <p><% while(trailshoe.stars--) { %> &star; <% } %></p>
+          <div class="image-responsive" style="background-image:url(<%= trailshoe.image %>)"></div>
         </a>
+        <h2><%= trailshoe.brand %></h2>
+        <h3><%= trailshoe.name %></h3>
+        <p>
+        <%= trailshoe.shortDescription %>
+        </p>
+        <p>
+        <%= trailshoe.fullStars %>
+        <%= trailshoe.emptyStars %>
+        <div class="staroutline">
+          <% var emptyStars = 5 - trailshoe.stars %>
+          <% while(trailshoe.stars--) { %> &#9733 <% } %>
+          <% while(emptyStars--) { %> &star; <% } %>
+        </div>
+        </p>
       </div>
       <% }) %>
     </div>
