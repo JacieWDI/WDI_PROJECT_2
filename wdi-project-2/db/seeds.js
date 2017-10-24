@@ -19,7 +19,7 @@ User.collection.drop();
 User
   .create([{
     email: 'janis@janis.com',
-    username: 'janis',
+    username: 'Janis',
     password: 'password',
     passwordConfirmation: 'password'
   }])
@@ -41,7 +41,7 @@ User
         brand: 'Salomon',
         name: 'Speedcross 4',
         image: 'https://e-megasport.de/eng_pl_Salomon-Speedcross-4-383130-5263_6.jpg',
-        description: 'Conquer every trail in the Salamon Speedcross 4. Become a blur as you power through the wilderness!',
+        description: 'Conquer every trail in the Salomon Speedcross 4. Become a blur as you power through the wilderness!',
         stars: 3,
         createdBy: users[0],
         comments: {
