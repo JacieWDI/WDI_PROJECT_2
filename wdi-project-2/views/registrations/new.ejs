@@ -1,9 +1,11 @@
 <% if (locals.message) { %>
+  <div class="nomatch">
   <p><%= message %></p>
+  </div>
 <% } %>
 
 <div class="container">
-<h4>Register</h4>
+<h4 class="titles">Register</h4>
 <form method="POST" action="/register">
   <div class="form-group">
     <label for="username">Username</label>

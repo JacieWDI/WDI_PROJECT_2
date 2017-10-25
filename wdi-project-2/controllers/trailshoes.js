@@ -51,7 +51,7 @@ function updateRoute(req, res, next) {
     .exec()
     .then(trailshoe => {
       if(!trailshoe) return res.notFound();
-      if(!trailshoe.belongsTo(req.user)) return res.unauthorized('You do not have permission to edit that resoource');
+      if(!trailshoe.belongsTo(req.user)) return res.unauthorized('You do not have permission to edit that resource');
 
       for (const field in req.body) {
         trailshoe[field] = req.body[field];

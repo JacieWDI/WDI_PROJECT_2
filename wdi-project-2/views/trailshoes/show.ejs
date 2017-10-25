@@ -14,35 +14,39 @@
   <img src="<%= trailshoe.image %>" alt="<%= trailshoe.name%>">
 
 
-  <p>
+  <div class="shoedetails">
     <h2><%= trailshoe.brand %></h2>
-    <h3><%= trailshoe.name %></h3><br>
-    <%= trailshoe.description %><br>
-  </p>
+    <h3><%= trailshoe.name %></h3>
+    <%= trailshoe.description %>
+  </div>
+
+
+
   <div class="staroutline">
     <% var emptyStars = 5 - trailshoe.stars %>
     <% while(trailshoe.stars--) { %> &#9733 <% } %>
     <% while(emptyStars--) { %> &star; <% } %>
+    <br>
+    <small>Added by: <%= trailshoe.createdBy.username %></small>
   </div>
 
-  <small>Added by: <%= trailshoe.createdBy.username %></small>
 
-    <section>
+  <div class="commentsdiv">
       <h3>Comments</h3>
       <% trailshoe.comments.forEach((comment) => { %>
-        <p><%= comment.content %></p>
+      <p><%= comment.content %></p>
         <small><%= comment.createdBy.username %></small>
       <% }) %>
-    </section>
+  </div>
 
 
     <% if(locals.isAuthenticated) { %>
-      <section>
-        <h4>Leave a comment</h4>
-        <form method="POST" action="/trailshoes/<%= trailshoe.id %>/comments">
-          <textarea name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
-          <button class="button">Submit</button>
-        </form>
-      </section>
+  <section>
+    <h4>Leave a comment</h4>
+    <form method="POST" action="/trailshoes/<%= trailshoe.id %>/comments">
+    <textarea name="content" id="content" placeholder="Comment" required maxlength="255"></textarea>
+    <button class="button">Submit</button>
+    </form>
+  </section>
     <% } %>
 </div>
