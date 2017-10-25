@@ -27,7 +27,6 @@ h2 {
     cursor:pointer;
   }
 
-
 }
 .nav-item {
   text-transform:uppercase;
@@ -37,6 +36,10 @@ h2 {
 .navbar-brand {
   text-transform:uppercase;
   font-weight: bold;
+}
+
+.sr-only {
+  text-align: left;
 }
 
 .staroutline {
@@ -61,16 +64,26 @@ h2 {
   margin-bottom: -30px;
 }
 
-.footer,
-.push {
+.footer, .push {
   height: 30px;
 }
 
 footer {
   background-color: #333333;
   color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  span {
+    float: right;
+  }
 }
 
-.right {
-  text-align: right;
+.mr-auto {
+  margin: 0!important;
+}
+
+ul {
+  margin-left: 0;
 }
