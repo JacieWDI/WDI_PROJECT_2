@@ -1,3 +1,7 @@
+span.heart {
+  color: red;
+}
+
 body {
   // font-family: 'Helvetica', sans-serif;
   font-family: 'Neuton', serif;
@@ -74,9 +78,11 @@ footer {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
-  padding-bottom: 5px;
-  span {
+  span.cr {
     float: right;
+  // span.heart {
+  //   color: red;
+  // }
   }
 }
 
