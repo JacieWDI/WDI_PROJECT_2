@@ -14,6 +14,8 @@ function newRoute(req, res) {
 }
 
 function createRoute(req, res, next) {
+  req.body.createdBy = req.user;
+  
   Trailshoe
     .create(req.body)
     .then(() => res.redirect('/trailshoes'))
