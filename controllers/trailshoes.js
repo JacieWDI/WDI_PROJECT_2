@@ -18,7 +18,7 @@ function createRoute(req, res, next) {
     .create(req.body)
     .then(() => res.redirect('/trailshoes'))
     .catch((err)=> {
-      if(err.name === 'ValidationError') return res.badRequest(`/trailshoes/${req.params.id}/edit`, err.toString());
+      if(err.name === 'ValidationError') return res.badRequest('/trailshoes/new', err.toString());
       next(err);
     });
 }
