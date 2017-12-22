@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "gulp deploy"
   },
-  "author": "",
+  "author": "JHChan jhchan.web@gmail.com",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^1.0.3",
